@@ -174,24 +174,22 @@ window.addEventListener('scroll', () => {
     scrollY = window.scrollY
     // camera.position.y = - scrollY / sizes.height * objectsDistance
 
-    console.log(scrollY / sizes.height)
-/*
     const newSection = Math.round(scrollY / sizes.height)
 
-    if(newSection != currentSection) {
-        currentSection = newSection
-        console.log('changed', currentSection)
+        if(newSection != currentSection) {
+            currentSection = newSection
+            console.log('changed', currentSection)
 
-        gsap.to(
-            sectionMeshes[currentSection].rotation,
-            {
-                duration: 1.5,
-                ease: 'power2.inOut',
-                x: '+=6',
-                y: '+=3'
-            }
-        )
-    }*/
+            gsap.to(
+                sectionMeshes[currentSection].rotation,
+                {
+                    duration: 1.5,
+                    ease: 'power2.inOut',
+                    x: '+=6',
+                    y: '+=3'
+                }
+            )
+        }
 } )
 
 
@@ -229,8 +227,8 @@ const tick = () =>
     const parallaxY = - cursor.y * 0.5
     cameraGroup.position.x += (parallaxX - cameraGroup.position.x) * 5 * deltaTime
     cameraGroup.position.y += (parallaxY - cameraGroup.position.y) * 5 * deltaTime
-/*
 
+/*
     // animate meshes
     for (const mesh of sectionMeshes) {
         /!*
